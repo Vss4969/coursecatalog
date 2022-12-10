@@ -5,6 +5,7 @@
     {
 
       "title"    : "{{ post.title | escape }}",
+      "url"      : "{{ post.url | relative_url }}",
       "name"     : "{{ post.name | escape}}",
       "department"     : "{{ post.department | escape }}"
 
