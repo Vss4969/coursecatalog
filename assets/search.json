@@ -1,0 +1,13 @@
+---
+---
+[
+  {% for post in site.courses %}
+    {
+
+      "title"    : "{{ post.title | escape }}",
+      "name"     : "{{ post.name | escape}}",
+      "department"     : "{{ post.department | escape }}"
+
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
