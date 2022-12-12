@@ -4,7 +4,7 @@ layout: page
 
 <div class="courselist">
 {% for course in site.courses %}
-    <div class="coursecard">
+    <div class="coursecard grow box">
         <div class="deptandinst">
             <span class="dept"> {{course.department}} </span> &nbsp; | &nbsp; <span class="inst">{{course.instructor}}</span>
         </div>

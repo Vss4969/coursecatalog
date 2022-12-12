@@ -11,43 +11,38 @@
 
 
 //coursecard
-.arrow-pointer {
-    width: 250px;
-    height: 50px;
-    background: #32557f;
-    position: relative;
+// .grow { transition: all .3s ease-in-out; }
+// .grow:hover { transform: scale(1.05); }
 
-    &:after {
-        content: '';
-        position: absolute;
-        left: 0; bottom: 0; width: 0; height: 0;
-        border-left: 25px solid #7eb4e2;
-        border-top: 25px solid transparent;
-        border-bottom: 25px solid transparent;
-    }
-
-    &:before {
-        content: '';
-        position: absolute;
-        right: -25px;
-        bottom: 0;
-        width: 0;
-        height: 0;
-        border-left: 25px solid #32557f;
-        border-top: 25px solid transparent;
-        border-bottom: 25px solid transparent;
-    }
-}
+// .box {
+//     transition: box-shadow .3s;
+//     width: 300px;
+//     height: 500px;
+//     margin: 50px;
+//     border-radius:10px;
+//     border: 1px solid #ccc;
+//     background: #fff;
+//     float: left;
+    
+//   }
+//   .box:hover {
+//     box-shadow: 0 0 11px rgba(33,33,33,.2); 
+//   }
 
 .fa-solid{
     color:#0dcaf0;
 }
 
 .coursecard{
-    margin: 30px;
+    transition: box-shadow .3s;
+    margin: 40px 100px;
     padding: 20px;
     border: 1.5px solid rgb(0, 0, 0);
     border-radius: 20px;
+}
+
+.coursecard:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
 
 .dept{
