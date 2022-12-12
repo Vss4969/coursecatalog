@@ -9,7 +9,7 @@ prerequisites: Exposure to Computer Programming (CS102)
 semestertype: full
 lectures: 3
 tutorials: 0
-praticals: 0
+practicals: 0
 credits: 6
 permalink: /:code
 ---

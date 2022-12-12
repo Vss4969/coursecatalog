@@ -49,23 +49,49 @@ layout: main
                 <li><b>E-mail:</b> {{page.email}}</li>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-1 first">
                 <table>
                     <tr>
-                        <th>L</th>
-                        <th>T</th>
-                        <th>P</th>
-                        <th>C</th>
+                        <th class="first-head">L</th>
                     </tr>
                     <tr>
                         <td>{{page.lectures}}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="col-1">
+                <table>
+                    <tr>
+                        <th>T</th>
+                    </tr>
+                    <tr>
                         <td>{{page.tutorials}}</td>
-                        <td>{{page.praticals}}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="col-1">
+                <table>
+                    <tr>
+                        <th>P</th>
+                    </tr>
+                    <tr>
+                        <td>{{page.practicals}}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="col-1 last">
+                <table>
+                    <tr>
+                        <th class="last-head">C</th>
+                    </tr>
+                    <tr>
                         <td>{{page.credits}}</td>
                     </tr>
                 </table>
             </div>
-            
         </div>
 
         <hr>
