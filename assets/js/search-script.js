@@ -185,7 +185,7 @@
         json: [],
         success: Function.prototype,
         searchResultTemplate:
-          '<li><a href="{url}">{title}</a></li>',
+          '<div class="coursecard"><div class="deptandinst"><span class="dept"> {department} </span> &nbsp; | &nbsp; <span class="inst">Prof. {instructor}</span></div><div class="coursedetail"><div style="font-size:25px; color:black;" >{title}: {name}</div></div><div class="LTPC"><span class="lec"><i class="fa-solid fa-chalkboard-user"></i> {lectures} Lectures </span><span class="tut"><i class="fa-solid fa-comment-dots"></i> {tutorials} Tutorials </span><span class="pra"><i class="fa-solid fa-flask"></i> {practicals} Practicals </span><span class="cre"><i class="fa-solid fa-graduation-cap"></i> {credits} Credits </span></div><div class="desc">{description}</div><a href="{url}"><button type="button" class="btn btn-info knowmore">Know more</button></a></div>',
         templateMiddleware: Function.prototype,
         sortMiddleware: function () {
           return 0;

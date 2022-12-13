@@ -35,14 +35,14 @@
 
 .coursecard{
     transition: box-shadow .3s;
-    margin: 40px 100px;
-    padding: 20px;
+    margin: 2.5rem 6.25rem;
+    padding: 1.25rem;
     border: 1.5px solid rgb(0, 0, 0);
-    border-radius: 20px;
+    border-radius: 1.25rem;
 }
 
 .coursecard:hover {
-    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+    box-shadow: 0 0 11px #0dcaf0; 
 }
 
 .dept{
@@ -66,10 +66,6 @@
     font-weight: 700;
 }
 
-.LTPC{
-    margin: 10px;
-}
-
 .desc{
     margin: 10px;
     color: rgb(102, 100, 100);
@@ -79,7 +75,7 @@
     margin: 10px;
 }
 
-.tut, .pra, .cre{
+.lec, .tut, .pra, .cre{
     margin: 0 0 0 20px;
 }
 

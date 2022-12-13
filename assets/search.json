@@ -1,13 +1,19 @@
 ---
 ---
 [
-  {% for post in site.courses %}
+  {% for course in site.courses %}
     {
 
-      "title"    : "{{ post.title | escape }}",
-      "url"      : "{{ post.url | relative_url }}",
-      "name"     : "{{ post.name | escape}}",
-      "department"     : "{{ post.department | escape }}"
+      "title"    : "{{ course.title | escape }}",
+      "name"     : "{{course.name | escape}}",
+      "url"      : "{{ site.baseurl }}{{ course.url }}",
+      "department"     : "{{ course.department | escape }}",
+      "instructor"     : "{{course.instructor | escape}}",
+      "lectures"       : "{{course.lectures}}",
+      "tutorials"       : "{{course.tutorials}}",
+      "practicals"       : "{{course.practicals}}",
+      "credits"       : "{{course.credits}}",
+      "description"     : "{{ course.description | strip_html | strip_newlines | escape }}"
 
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}

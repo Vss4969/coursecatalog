@@ -9,7 +9,7 @@ permalink: /search
     <h1>Search here</h1>
     <input class="form-control me-2" type="search" placeholder="search..." aria-label="Search" id="search-input">
     <!-- <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> -->
-    <ul id="results-container"></ul>
+    <div id="results-container" class="courselist"></div>
 </form>
 
 <!-- <h1>Search here</h1>
