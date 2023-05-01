@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+</head>
+
+{% include pagehead.html %}
+
+<body>
+
+    {% include sidebar.html %}
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+        <div class="masthead">
+            <div class="container">
+                <h3 class="masthead-title">
+                    <a href="{{ site.baseurl }}/" title="Home">Home</a>
+                </h3>
+            </div>
+        </div>
+
+        <div class="container content">
+            {% if page.url == '/pages/cs/' %}<h1 class="page-heading">Computer Science</h1><hr>{% endif %}
+            {% if page.url == '/pages/ee/' %}<h1 class="page-heading">Electrical Engineering</h1><hr>{% endif %}
+            {% if page.url == '/pages/me/' %}<h1 class="page-heading">Mechanical Engineering</h1><hr>{% endif %}
+            {% if page.url == '/pages/ch/' %}<h1 class="page-heading">Chemistry</h1><hr>{% endif %}
+            {% if page.url == '/pages/ph/' %}<h1 class="page-heading">Physics</h1><hr>{% endif %}
+            {% if page.url == '/pages/hs/' %}<h1 class="page-heading">Humanities and Social Sciences</h1><hr>{% endif %}
+
+            <div class="dropdownw">
+                <button onclick="myFunction1()" class="dropbtn btn btn-info dropdown-toggle">Departments</button>
+                <div id="myDropdown1" class="dropdown-content">
+                    <a class="{% if page.url == '/pages/cs/' %} dropdown-curr {% endif %}" href="../cs/">Computer Science</a>
+                    <a class="{% if page.url == '/pages/ee/' %} dropdown-curr {% endif %}" href="../ee/">Electrical Engineering</a>
+                    <a class="{% if page.url == '/pages/me/' %} dropdown-curr {% endif %}" href="../me/">Mechanical Engineering</a>
+                    <a class="{% if page.url == '/pages/ch/' %} dropdown-curr {% endif %}" href="../ch/">Chemistry</a>
+                    <a class="{% if page.url == '/pages/ph/' %} dropdown-curr {% endif %}" href="../ph/">Physics</a>
+                    <a class="{% if page.url == '/pages/hs/' %} dropdown-curr {% endif %}" href="../hs/">Humanities and Social Sciences</a>
+                </div>
+            </div>
+            
+            <div class="dropdownw">
+                <button onclick="myFunction2()" class="dropbtn btn btn-info dropdown-toggle">Course Code</button>
+                <div id="myDropdown2" class="dropdown-content">
+                    <a class="{% if page.url == '/pages/100/' %} dropdown-curr {% endif %}" href="../100/">100</a>
+                    <a class="{% if page.url == '/pages/200/' %} dropdown-curr {% endif %}" href="../200/">200</a>
+                    <a class="{% if page.url == '/pages/300/' %} dropdown-curr {% endif %}" href="../300/">300</a>
+                    <a class="{% if page.url == '/pages/400/' %} dropdown-curr {% endif %}" href="../400/">400</a>
+                    <a class="{% if page.url == '/pages/600/' %} dropdown-curr {% endif %}" href="../600/">600</a>
+                </div>  
+            </div>
+
+            <div class="dropdownw">
+                <button onclick="myFunction3()" class="dropbtn btn btn-info dropdown-toggle">UG / PG</button>
+                <div id="myDropdown3" class="dropdown-content">
+                    <a class="{% if page.url == '/pages/ug/' %} dropdown-curr {% endif %}" href="../ug/">UG</a>
+                    <a class="{% if page.url == '/pages/pg/' %} dropdown-curr {% endif %}" href="../pg/">PG</a>
+                </div>  
+            </div>
+
+            {{content}}
+            <div class="pagin"></div>
+        </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script src='../../public/js/script.js'></script>
+    <script src='../../public/js/search-script.js'></script>
+    <script src='../../public/js/dropdown.js'></script>
+    <script src='../../public/js/pagination.js'></script>
+    <script src="https://kit.fontawesome.com/b85ec31a5d.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<div class="courselist">
+    <div class="coursecard">
+        <span class="dept"> {{course.department}} </span><br>
+        <div class="coursedetail">
+            <div style="font-size:25px; color:black;">{{course.title}}: {{course.name}}</div>
+            <div class="inst">{{course.instructor}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"><i class="fa-solid fa-chalkboard-user"></i> {{course.lectures}} Lectures</div>
+            <div class="col-md-2"><i class="fa-solid fa-comment-dots"></i> {{course.tutorials}} Tutorials</div>
+            <div class="col-md-2"><i class="fa-solid fa-flask"></i> {{course.practicals}} Practicals </div>
+            <div class="col-md-2"><i class="fa-solid fa-graduation-cap"></i> {{course.credits}} Credits</div>
+        </div>
+        <div class="desc">{% if course.description == null %}{% else %}{{course.description}}{% endif %}</div>
+        <a href="{{course.url | relative_url}}"><button type="button" class="btn btn-info knowmore">Know more</button></a>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+---
+---
+[
+  {% for post in site.courses %}
+    {
+
+      "name"    : "{{ post.name | escape }}",
+      "title"    : "{{ post.title | escape }}",
+      "url"      : "{{ site.baseurl }}{{ post.url }}",
+      "inst"   : "{{ post.instructor }}",
+      "department"     : "{{ post.department }}",
+      "description"     : "{{ post.description }}",
+      "coursename"      : "{{ post.categories[0] }}",
+      "coursecode"      : "{{ post.categories[1] }}",
+      "courselevel"      : "{{ post.categories[2] }}"
+
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

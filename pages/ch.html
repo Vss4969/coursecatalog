@@ -1,0 +1,9 @@
+---
+layout: department
+---
+
+{% for course in site.courses %}
+    {% if course.categories[0] == 'ch' %}
+        {% include coursecard.html %}
+    {% endif %}
+{% endfor %}

@@ -1,0 +1,9 @@
+---
+layout: department
+---
+
+{% for course in site.courses %}
+    {% if course.categories[2] == 'pg' or course.categories[2] == 'ugpg' %}
+        {% include coursecard.html %}
+    {% endif %}
+{% endfor %}
