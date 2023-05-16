@@ -95,18 +95,7 @@
                         </tr>
                         <tr>
                             <td><b>Pre-requisites :</b></td>
-                            <td>{% if page.prerequisites == null %}
-                                    None
-                                {% else %}
-                                    {% assign isFirst = true %}
-                                    {% for prereq in page.prerequisites %}
-                                        {% unless page.prerequisites %}{% continue %}{% endunless %}
-                                        {% unless isFirst %},{% endunless %}
-                                        {% assign isFirst = false %}
-                                        <a href="{{prereq | relative_url}}" style="text-decoration:none;">{{prereq}}</a>
-                                    {% endfor %}
-                                {% endif %}
-                            </td>
+                            <td>{% if page.prerequisites == null %}None{% else %}<a href="{{page.prerequisites | relative_url}}" style="text-decoration:none;">{{page.prerequisites}}{% endif %}</a></td>
                         </tr>
                     </table>
                 </div>
